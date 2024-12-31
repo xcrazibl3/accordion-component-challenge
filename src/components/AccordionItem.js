@@ -1,25 +1,6 @@
 import { useState } from "react";
-import { faqs } from "./faqs";
 
-function App() {
-  return (
-    <div>
-      <Accordion data={faqs} />
-    </div>
-  );
-}
-
-function Accordion({ data }) {
-  return (
-    <div className="accordion">
-      {data.map((item, i) => (
-        <AccordionItem item={item} number={i} key={i} />
-      ))}
-    </div>
-  );
-}
-
-function AccordionItem({ item, number }) {
+export default function AccordionItem({ item, number }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -34,4 +15,3 @@ function AccordionItem({ item, number }) {
     </div>
   );
 }
-export default App;
